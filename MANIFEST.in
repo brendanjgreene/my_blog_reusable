@@ -1,0 +1,6 @@
+include LICENSE
+include README.rst
+recursive-exclude my *.pyc
+recursive-include my_blog *.css
+recursive-include my_blog *.html
+recursive-include my_blog *.py
