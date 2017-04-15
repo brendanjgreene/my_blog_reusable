@@ -16,7 +16,9 @@
                         {% endif %}
                         <p>{{ post.content }}</p>
                         <p><button class="btn btn-default" onclick="location.href='/blog'">Back To Blog</button>
-                        <button class="btn btn-default" onclick="location.href='edit'">Edit</button></p>
+                        {% if post.user == user or user.is_staff %}
+                            <button class="btn btn-default" onclick="location.href='edit'">Edit</button></p>
+                        {% endif %}
                         {{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag - </strong> {{ post.tag }}
                         {% load disqus_tags %}
                         {% set_disqus_title post.title %}
