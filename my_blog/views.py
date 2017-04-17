@@ -55,5 +55,5 @@ def edit_post(request, id):
 def top_lists(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()
                                 ).order_by('-views')[:5]
-    return render(request, "blog/blogposts.html", {'posts': posts})
+    return render(request, "blogposts.html", {'posts': posts})
 
