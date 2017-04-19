@@ -3,8 +3,8 @@
 {% block content %}
 <hr>
     <button class="btn btn-primary pull-right" onclick="location.href='{% url 'new_post' %}'">Make New Post</button>
-    <button class="btn btn-default" onclick="location.href='{% url 'top_lists' %}'">Top Posts</button>
-    <button class="btn btn-default" onclick="location.href='{% url 'post_list' %}'">All Posts</button>
+    <button class="btn btn-info" onclick="location.href='{% url 'top_lists' %}'">Top Posts</button>
+    <button class="btn btn-success" onclick="location.href='{% url 'post_list' %}'">All Posts</button>
     {% for post in posts %}
         <div class="row">
             <hr>
