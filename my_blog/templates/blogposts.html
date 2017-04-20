@@ -12,6 +12,7 @@
                 <a class="story-img" href="#">
                     <img src="{{ user.png }}" alt="Image not Found" onerror="this.onerror=null;this.src='http://placehold.it/100';" style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
                 </a>
+
             </div>
             <div class="col-md-10 col-sm-9">
                 <h3>{{ post.title }}</h3>
@@ -19,7 +20,8 @@
                     <div class="col-xs-9">
                         <p>{{ post.content|truncatewords:30 }}</p>
                         <p><button class="btn btn-default" onclick="location.href={{ post.id }}">Read More</button></p>
-                        {{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}
+                        {{ post.published_date }} | <strong>Views -</strong> {{ post.views }} |
+                        <strong>Tag -</strong> {{ post.tag }} | <strong>Author -</strong> {{ post.author }}
                     </div>
                 </div>
             </div>
