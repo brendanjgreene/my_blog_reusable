@@ -15,9 +15,11 @@
                             <img src="/media/{{ post.image }}" style="width: inherit">
                         {% endif %}
                         <p>{{ post.content }}</p>
-                        <p><button class="btn btn-default" onclick="location.href='/blog'">Back To Blog</button>
+                        <div class="btn-group">
+                            <button class="btn btn-primary" onclick="location.href='/blog'">Back To Blog</button>
                         {% if post.user == user or user.is_staff %}
-                            <button class="btn btn-default" onclick="location.href='edit'">Edit</button></p>
+                            <button class="btn btn-info" onclick="location.href='edit'">Edit</button>
+                        </div>
                         {% endif %}
                         {{ post.published_date }} | <strong>Views - </strong> {{ post.views }} |
                         <strong>Tag - </strong> {{ post.tag }} | <strong>Author -</strong> {{ post.author }}

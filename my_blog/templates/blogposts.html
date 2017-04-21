@@ -2,9 +2,11 @@
 
 {% block content %}
 <hr>
-    <button class="btn btn-primary pull-right" onclick="location.href='{% url 'new_post' %}'">Make New Post</button>
-    <button class="btn btn-info" onclick="location.href='{% url 'top_lists' %}'">Top Posts</button>
-    <button class="btn btn-success" onclick="location.href='{% url 'post_list' %}'">All Posts</button>
+<div class="btn-group">
+<button type="button" class="btn btn-primary" onclick="location.href='{% url 'new_post' %}'">Make New Post</button>
+<button type="button" class="btn btn-info" onclick="location.href='{% url 'top_lists' %}'">Top Posts</button>
+<button type="button" class="btn btn-success" onclick="location.href='{% url 'post_list' %}'">All Posts</button>
+</div>
     {% for post in posts %}
         <div class="row">
             <hr>
